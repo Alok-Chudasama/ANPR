@@ -2,6 +2,10 @@
 window.onload = function () {
     window.mode = true;
 
+    window.modelUrl = 'https://raw.githubusercontent.com/Alok-Chudasama/model/main/model.json'
+
+    window.model = await tf.loadGraphModel('https://raw.githubusercontent.com/Alok-Chudasama/model/main/model.json');
+    
     window.canvas = document.getElementById('snapshot');
     window.ctx = canvas.getContext('2d');
 
@@ -228,6 +232,7 @@ function runOCR(url) {
         console.log(result.text);
         document.getElementById('numberPlate').innerHTML = result.text;
     }).progress(function (result) {
+        document.getElementById('numberPlate').innerHTML = result["status"] + " (" + (result["progress"] * 100) + "%)";
         console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
         // document.getElementById("ocr_status").innerText = result["status"] + " (" +(result["progress"] * 100) + "%)";
     });
