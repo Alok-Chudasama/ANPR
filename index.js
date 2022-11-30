@@ -27,9 +27,13 @@ document.getElementById("FileAttachment").onchange = function () {
     document.getElementById("fileuploadurl").value = this.value;
 };
 
-$('#FileAttachment').change(function (event) {
+document.getElementById("FileAttachment").onchange = function () {
     $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
-});
+};
+
+// $('#FileAttachment').change(function (event) {
+//     $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+// });
 
 
 // CAMERA 
