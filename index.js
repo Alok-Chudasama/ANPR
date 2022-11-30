@@ -58,9 +58,6 @@ var start = function () {
             });
     }
 }
-$(function () {
-    start();
-});
 
 
 var player = document.getElementById('video');
@@ -105,6 +102,7 @@ function photoMode() {
 }
 
 function cameraMode() {
+    start();
     mode = false;
 
     let photo = document.getElementById("container1");
