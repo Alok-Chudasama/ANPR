@@ -1,12 +1,6 @@
 // ON LOAD
 window.onload = function () {
     window.mode = true;
-
-//     window.modelUrl = 'https://raw.githubusercontent.com/Alok-Chudasama/model/main/model.json'
-
-//     window.model = await tf.loadGraphModel('https://raw.githubusercontent.com/Alok-Chudasama/model/main/model.json');
-    
-//     consel.log(model);
     
     window.canvas = document.getElementById('snapshot');
     window.ctx = canvas.getContext('2d');
